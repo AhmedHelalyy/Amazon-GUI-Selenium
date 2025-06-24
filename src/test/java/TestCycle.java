@@ -9,5 +9,10 @@ public class TestCycle extends BaseUrl {
     public void Test_ValidSC() {
         SignInPage signInPage = homePage.clickOnSignInButton();
 
+        signInPage.setPhoneNumberField("1558348474");
+
+        signInPage.clickOnContinueButton();
+
+        signInPage.setPasswordField("A@557971645h");
     }
 }

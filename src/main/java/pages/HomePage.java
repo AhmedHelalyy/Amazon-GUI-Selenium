@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static utils.Utilities.waitStrategyVisibility;
+
 //import static utils.Utilities.*;
 
 public class HomePage {
@@ -20,6 +22,7 @@ public class HomePage {
     private By signInButton = By.xpath("//*[@id=\"nav-link-accountList\"]/a");
 
     public SignInPage clickOnSignInButton() {
+        waitStrategyVisibility(driver,signInButton,10 );
         driver.findElement(signInButton).click();
         return new SignInPage(driver);
     }
