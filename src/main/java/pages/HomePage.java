@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static utils.Utilities.waitStrategyVisibility;
+
 //import static utils.Utilities.*;
 
 public class HomePage {
@@ -18,11 +20,17 @@ public class HomePage {
 
     //Locators
     private By signInButton = By.xpath("//*[@id=\"nav-link-accountList\"]/a");
+    private By openAllCategoriesMenuButton = By.xpath("//*[@id=\"nav-hamburger-menu\"]");
 
     public SignInPage clickOnSignInButton() {
+        waitStrategyVisibility(driver,signInButton,10 );
         driver.findElement(signInButton).click();
         return new SignInPage(driver);
     }
 
-
+    public CategoriesPage clickOnOpenAllCategoriesMenu() {
+        waitStrategyVisibility(driver,openAllCategoriesMenuButton,10 );
+        driver.findElement(openAllCategoriesMenuButton).click();
+        return new CategoriesPage(driver);
+    }
 }

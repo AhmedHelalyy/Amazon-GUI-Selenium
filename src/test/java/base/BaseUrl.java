@@ -17,7 +17,7 @@ public class BaseUrl {
 
 
     //    site url
-    private static String url = "https://www.amazon.eg/";
+    private static String url = "https://www.amazon.eg/?language=en_AE";
 
 
 
