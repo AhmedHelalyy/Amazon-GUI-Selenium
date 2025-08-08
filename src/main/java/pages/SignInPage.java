@@ -21,6 +21,7 @@ public class SignInPage {
     private By phoneNumberField = By.xpath("//*[@id=\"ap_email_login\"]");
     private By continueButton = By.xpath("//*[@id=\"continue\"]/span/input");
     private By passwordField = By.xpath("//*[@id=\"ap_password\"]");
+    private By signInSubmitButton = By.xpath("//*[@id=\"signInSubmit\"]");
 
 
 
@@ -43,5 +44,10 @@ public class SignInPage {
     {
         waitStrategyVisibility(driver,passwordField,10 );
         driver.findElement(passwordField).sendKeys(password);
+    }
+
+    public void clickOnSignInSubmitButton() {
+        waitStrategyVisibility(driver,signInSubmitButton,10 );
+     driver.findElement(signInSubmitButton).click();
     }
 }

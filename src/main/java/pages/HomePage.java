@@ -20,6 +20,7 @@ public class HomePage {
 
     //Locators
     private By signInButton = By.xpath("//*[@id=\"nav-link-accountList\"]/a");
+    private By openAllCategoriesMenuButton = By.xpath("//*[@id=\"nav-hamburger-menu\"]");
 
     public SignInPage clickOnSignInButton() {
         waitStrategyVisibility(driver,signInButton,10 );
@@ -27,5 +28,9 @@ public class HomePage {
         return new SignInPage(driver);
     }
 
-
+    public CategoriesPage clickOnOpenAllCategoriesMenu() {
+        waitStrategyVisibility(driver,openAllCategoriesMenuButton,10 );
+        driver.findElement(openAllCategoriesMenuButton).click();
+        return new CategoriesPage(driver);
+    }
 }

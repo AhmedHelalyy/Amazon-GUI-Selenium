@@ -1,5 +1,6 @@
 import base.BaseUrl;
 import org.testng.annotations.Test;
+import pages.CategoriesPage;
 import pages.SignInPage;
 
 public class TestCycle extends BaseUrl {
@@ -14,5 +15,9 @@ public class TestCycle extends BaseUrl {
         signInPage.clickOnContinueButton();
 
         signInPage.setPasswordField("A@557971645h");
+
+        signInPage.clickOnSignInSubmitButton();
+
+        CategoriesPage categoriesPage = homePage.clickOnOpenAllCategoriesMenu();
     }
 }
