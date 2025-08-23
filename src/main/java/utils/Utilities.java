@@ -30,6 +30,16 @@ public class Utilities {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * Waits for a specific text to be present within a WebElement up to a specified time.
+     *
+     * @param driver The WebDriver instance.
+     * @param element The WebElement to wait for.
+     * @param text The text to wait for.
+     * @param timeInSeconds The time to wait in seconds.
+     */
+/* <<<<<<<<<<  1fd1163f-5673-4064-a3de-d573b07f95b0  >>>>>>>>>>> */
     public static void waitStrategyTextPresent(WebDriver driver, WebElement element, String text, int timeInSeconds) {
 
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
